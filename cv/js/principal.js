@@ -7,8 +7,8 @@ function scrollUp(){
 
     if (currentScroll > 0){
         window.requestAnimationFrame(scrollUp);
-        window.scrollTo (0, currentScroll - (currentScroll / 10));
-          buttonPdf.style.bottom = "35px";
+        window.scrollTo (0, currentScroll - (currentScroll / 5));
+        buttonPdf.style.bottom = "35px";
          buttonUp.style.transform = "scale(0)";
     }
 }
