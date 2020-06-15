@@ -54,20 +54,19 @@ function traerDatos(){
      for (let cod of certificates){
        // console.log(cod);
         res.innerHTML +=`
-      <div class="col mb-4">
-         <div class="card ">
-            <img style="width: 100px; height: 100px" src="${cod.icon}" class="imgCard card-img-top mx-auto d-block mt-5 mb-2" alt="...">
-           <div class=" mask blue-gradient-rgba">
-             <div class="card-body">
-             <h4 class="card-title" style="text-align: center;font-size:20px;font-family: 'Lora', serif;color: #fff; margin-top: 5px"><strong>${cod.title}</strong></h4>
+          <div class="col mb-4">
+             <div class="card " >
+                <img style="width: 100px; height: 100px" src="${cod.icon}" class="imgCard card-img-top mx-auto d-block mt-5 mb-2" alt="...">
+                 <div class=" mask blue-gradient-rgba " style="height: 100%">
+                   <div class="card-body">
+                   <h4 class="card-title" style="text-align: center;font-size:20px;font-family: 'Lora', serif;color: #fff; margin-top: 5px"><strong>${cod.title}</strong></h4>
+                   </div>
+                  <div class="card-footer text-center mt-10" >
+                    <p style="color: rgb(18, 19, 41);font-size: 20px">Calificación:  ${cod.score}</p>
+                  </div>
+               </div>
              </div>
-            <!-- Card footer -->
-              <div class="card-footer text-muted text-center" >
-                <p style="color: rgb(18, 19, 41);font-size: 20px">Calificación:  ${cod.score}</p>
-              </div>
            </div>
-         </div>
-       </div>
         `
      }
    }
