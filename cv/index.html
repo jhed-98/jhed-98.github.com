@@ -47,6 +47,15 @@
   .toast-success{
     background-color: rgb(8, 147, 51);
   }
+  .primary-color{
+   background-color: rgb(14, 89, 131) !important;
+  }
+  .dropdown-item:hover{
+    background-color: rgba(48, 107, 140, 0.84) !important;
+  }
+  .navbar.navbar-dark .navbar-nav .nav-item .nav-link:hover{
+      background-color: rgba(69, 142, 173, 0.89) !important;
+  } 
   </style>
     <header>
       <nav class="navbar fixed-top navbar-expand-lg  navbar-dark backg-color scrolling-navbar ">
@@ -70,11 +79,20 @@
                     <li class="nav-item">
                       <a class="nav-link" href="#Educacion">Educación</a>
                     </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#habilidades">Habilidades</a>
+                    <li class="nav-item ">
+                      <a class="nav-link" href="#Habilidades">Habilidades</a>
                     </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Certificado</a>
+                    <!-- dropdown -->
+                    <li class="nav-item dropdown multi-level-dropdown">
+                      <a href="#" id="menu" data-toggle="dropdown" class="nav-link dropdown-toggle w-100">Codigo Facilito</a>
+                      <ul class="dropdown-menu mt-2 rounded-0 primary-color border-0 z-depth-1">
+                        <li class="dropdown-item ">
+                          <a href="#myCertfCF"   style="font-size: 15px;color:#fff">Certificados</a>
+                        </li>
+                        <li class="dropdown-item ">
+                          <a href="#myCursCF"   style="font-size: 15px;color:#fff">Cursos</a>
+                        </li>
+                      </ul>
                     </li>
                   </ul>
                 </div>
@@ -216,7 +234,7 @@
       </div>
 </section>
  <!--Habilidades-->
-<section id="habilidades" class="section-cv py-5 mb-n5">
+<section id="Habilidades" class="section-cv py-5 mb-n5">
       <div class="container" >
 
        <h1 class="section-hab">Habilidades</h1>
@@ -315,6 +333,28 @@
           </div>
 </section>
 
+<section id="myCertfCF" class="section-cv py-5 mb-n5">
+  <div class="container">
+    <button type="button" id="btnjson" class="d-none">Json</button>
+    <h1 class="section-hab">Mis certificados online en Código Facilito</h1>
+    <div class="row row-cols-1 row-cols-md-3 mt-5" id="res">
+
+    </div>
+
+  </div>
+</section>
+
+<section id="myCursCF" class="section-cv py-5 mb-n5">
+  <div class="container">
+       <button type="button" id="btnjsonCursos" class="d-none">Json</button>
+             <h1 class="section-hab">Mis cursos en Código Facilito</h1>
+             <div class="product-sprite">
+                 <div class="sprite-container " id="resCursos">
+
+                 </div>
+             </div>
+   </div>
+</section>
 
 <!-- Boton PDF -->
 <div id="button-pdf">
@@ -331,9 +371,10 @@
   <div class="footer d-flex justify-content-center align-items-center ">
     <p>© 2020 by JhEd</p>
   </div>
-
+  <!-- JS -->
+  <script src="js/principal.js"></script>
 <!-- SCRIPT DE STARTER TEMPLATE -->
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script> -->
 <!-- SCRIPT DE TOASTR -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" ></script>
 <!-- JQuery -->
@@ -344,8 +385,7 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/js/mdb.min.js"></script>
-<!-- JS -->
-<script src="js/principal.js"></script>
+
 
 <!-- ANIMACION DE LOADING -->
   <script>
