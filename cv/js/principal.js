@@ -1,9 +1,8 @@
 
 
 // Scroll up
-
-document.getElementById("button-up").addEventListener("click", scrollUp);
-
+ 
+document.querySelector('#button-up').addEventListener("click", scrollUp);
 function scrollUp(){
 
     var currentScroll = document.documentElement.scrollTop;
