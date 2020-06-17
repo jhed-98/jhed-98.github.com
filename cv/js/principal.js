@@ -11,8 +11,6 @@ function scrollUp(){
     if (currentScroll > 0){
         window.requestAnimationFrame(scrollUp);
         window.scrollTo (0, currentScroll - (currentScroll / 10));
-        buttonPdf.style.bottom = "35px";
-        buttonUp.style.transform = "scale(0)";
     }
 }
 
@@ -20,21 +18,28 @@ function scrollUp(){
 ///
 
 buttonUp = document.getElementById("button-up");
-buttonPdf = document.getElementById("button-pdf");
 
 window.onscroll = function(){
 
     var scroll = document.documentElement.scrollTop;
 
     if (scroll > 500){
-        buttonPdf.style.bottom = "120px";
         buttonUp.style.transform = "scale(1)";
     }else if(scroll < 500){
-        buttonPdf.style.bottom = "35px";
         buttonUp.style.transform = "scale(0)";
     }
 
 }
+
+document.getElementById("enlace-github").addEventListener("click", mensajeGit);
+
+function mensajeGit(){
+  toastr.warning("Lo sentimos,pero el enlace aún no esta disponible.","Ooops...!",{
+                "progressBar":true});
+}
+
+
+// Llamando datos JSON
 
 document.querySelector('#btnjson').addEventListener("click", traerDatos());
 function traerDatos(){

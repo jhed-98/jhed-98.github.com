@@ -21,6 +21,8 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
 <!-- Material Design Bootstrap -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/css/mdb.min.css" rel="stylesheet">
+<!-- BS - Startet Template-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
      <!-- ANIMATE CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 </head>
@@ -47,14 +49,30 @@
   .toast-success{
     background-color: rgb(8, 147, 51);
   }
+  .toast-warning{
+    background-color: rgb(190, 179, 28);
+  }
   .primary-color{
    background-color: rgb(14, 89, 131) !important;
   }
   .dropdown-item:hover{
     background-color: rgba(48, 107, 140, 0.84) !important;
+     padding: .84rem 2.14rem;
   }
   .navbar.navbar-dark .navbar-nav .nav-item .nav-link:hover{
-      background-color: rgba(69, 142, 173, 0.89) !important;
+      background-color: rgba(69, 142, 173, 0.89) ;
+      text-transform: uppercase;
+      padding: .84rem 1rem;
+  }
+  .nav-dis, .dropdown-item{
+     text-align: center;
+       margin-top: 0.875rem;
+  }
+  .btn-outline-white {
+    background-color: rgb(195, 18, 39)!important;
+  }
+  .nav-btn:hover {
+    background-color: rgba(223, 41, 41, 0.96)!important;
   }
   </style>
     <header>
@@ -71,32 +89,36 @@
 
                 <div class="collapse navbar-collapse " id="navbarSupportedContent">
                   <div id="marker"></div>
-                  <ul class="navbar-nav ml-auto ">
+                  <ul class="navbar-nav ml-auto align-items-cemter">
                     <li class="nav-item">
-                      <a class="nav-link" href="#Experiencia">Experiencia</a>
+                      <a class="nav-link nav-dis" href="#Experiencia">Experiencia</a>
                     </li>
 
                     <li class="nav-item">
-                      <a class="nav-link" href="#Educacion">Educación</a>
+                      <a class="nav-link nav-dis" href="#Educacion">Educación</a>
                     </li>
                     <li class="nav-item ">
-                      <a class="nav-link" href="#Habilidades">Habilidades</a>
+                      <a class="nav-link nav-dis" href="#Habilidades">Habilidades</a>
+                    </li>
+                    <li class="nav-item ">
+                      <a class="nav-link nav-dis" id="enlace-github" href="#"> <i class="fab fa-github"></i> Proyectos</a>
                     </li>
                     <!-- dropdown -->
                     <li class="nav-item dropdown multi-level-dropdown">
-                      <a href="#" id="menu" data-toggle="dropdown" class="nav-link dropdown-toggle w-100">Codigo Facilito</a>
-                      <ul class="dropdown-menu mt-2 rounded-0 primary-color border-0 z-depth-1">
-                        <li class="dropdown-item ">
-                          <a href="#myCertfCF"   style="font-size: 15px;color:#fff">Certificados</a>
-                        </li>
-                        <li class="dropdown-item ">
-                          <a href="#myCursCF"   style="font-size: 15px;color:#fff">Cursos</a>
-                        </li>
-                      </ul>
+                       <a class="nav-link nav-dis dropdown-toggle w-100" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+                         aria-haspopup="true" aria-expanded="false" >Codigo Facilito
+                       </a>
+                       <div class="dropdown-menu mt-2 rounded-0 primary-color border-0 z-depth-1" aria-labelledby="navbarDropdownMenuLink-333">
+                         <a class="dropdown-item nav-link " href="#myCertfCF"   style="font-size: 15px;color:#fff">Certificados</a>
+                         <a class="dropdown-item nav-link " href="#myCursCF"   style="font-size: 15px;color:#fff">Cursos</a>
+
+                       </div>
+                     </li>
+                    <li class="nav-item ">
+                      <a class="nav-btn nav-link btn btn-outline-white " target="_blank" href="https://drive.google.com/file/d/1THfLvWe-fb_JfFqLYM3wodUgCfOj5EIS/view?usp=sharing"><i class="far fa-file-pdf"></i> Cv ~ JhEd</a>
                     </li>
                   </ul>
                 </div>
-
           </div>
         </nav>
     </header>
@@ -355,11 +377,6 @@
    </div>
 </section>
 
-<!-- Boton PDF -->
-<div id="button-pdf">
-  <a style="color: white;" href="https://drive.google.com/file/d/1THfLvWe-fb_JfFqLYM3wodUgCfOj5EIS/view?usp=sharing" title="PDF Cv ~ JhEd" target="_blank"><i class="far fa-file-pdf"></i>
-  </a>
-</div>
 
 <!-- Boton arriba -->
 <div id="button-up">
@@ -372,19 +389,19 @@
   </div>
   <!-- JS -->
   <script src="js/principal.js"></script>
+  <!-- JQuery -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/js/mdb.min.js"></script>
+
 <!-- SCRIPT DE STARTER TEMPLATE -->
-<!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script> -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 <!-- SCRIPT DE TOASTR -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" ></script>
-<!-- JQuery -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<!-- Bootstrap tooltips -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
-<!-- Bootstrap core JavaScript -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
-<!-- MDB core JavaScript -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/js/mdb.min.js"></script>
-
 
 <!-- ANIMACION DE LOADING -->
   <script>
